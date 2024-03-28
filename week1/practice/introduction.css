@@ -1,0 +1,69 @@
+* {
+  text-align: center;
+}
+
+header {
+  color: pink;
+}
+
+main {
+  font-size: 18px;
+}
+
+input {
+  text-align: left;
+  font-size: 18px;
+}
+
+button {
+  color: pink;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-style: dashed;
+  font-size: 18px;
+}
+
+button:hover {
+  color: white;
+  background-color: pink;
+}
+
+.wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.block_wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(219, 225, 245);
+  width: 1500px;
+  height: 300px;
+}
+
+.first_block {
+  width: 400px;
+  height: 250px;
+  background-image: url("/오호리.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.second_block {
+  width: 400px;
+  height: 250px;
+  background-image: url("/카메라.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.third_block {
+  width: 400px;
+  height: 250px;
+  background-image: url("/제주도.png");
+  background-position: center;
+  background-size: cover;
+}
