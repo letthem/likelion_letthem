@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  padding-top: 66px;
+}
+
+/* navbar */
+
+.navbar {
+  width: 100%;
+  height: 66px;
+  background-color: white;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  position: fixed;
+}
+
+.logo_wrapper {
+  display: flex;
+  margin-left: 210px;
+}
+
+.navbar_logo {
+  width: 156px;
+  height: 66px;
+  border-style: none;
+  background-color: white;
+}
+
+.logo {
+  width: 108px;
+}
+
+.navbar_unit li {
+  color: #222222;
+  margin-left: 35px;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  padding-top: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.login_btn {
+  width: 89.51px;
+  height: 64px;
+  border-style: none;
+  background-color: white;
+}
+
+.login_btn span {
+  width: 41.51px;
+  height: 24px;
+  color: #737373;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* bootcamp */
+
+.bootcamp {
+  margin-top: 80px;
+  margin-left: 245px;
+  margin-right: 245px;
+  width: 100%;
+  height: 900px;
+}
+
+.small_title {
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(255, 119, 16);
+  margin-top: 10px;
+}
+
+.middle_title {
+  display: flex;
+  margin-top: 10px;
+}
+
+.middle_title span {
+  margin-top: 10px;
+  margin-left: 830px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+h3 {
+  color: #262626;
+  font-size: 26px;
+  font-weight: 650;
+  margin-top: 4px;
+  margin-right: 16px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+}
+
+.bootcamp .container {
+  display: grid;
+  grid-template-columns: 290px 290px 290px 290px;
+  grid-template-rows: 420px 420px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.bootcamp_img {
+  width: 290px;
+  height: 220px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 5%;
+  margin-bottom: 20px;
+}
+
+.bootcamp_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.period {
+  border: 1px solid #059669;
+  width: 90.63px;
+  text-align: center;
+  color: #059669;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 1px;
+  border-radius: 4px;
+}
+
+.school {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222222;
+  margin: 16px 0px 8px;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  line-height: 27px;
+  color: #222222;
+}
+
+.date {
+  display: block;
+  margin-top: 16px;
+  font-size: 16px;
+  color: #a3a3a3;
+}
+/* schedule */
+.schedule {
+  margin-top: 80px;
+  margin-left: 245px;
+  margin-right: 245px;
+  width: 100%;
+}
+
+.schedule_select {
+  display: flex;
+  width: 1232px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.s_class {
+  color: #ff7710;
+  border-bottom: 2px solid #ff7710;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 24px;
+  text-align: center;
+  line-height: 38px;
+}
+
+.s_month {
+  color: #737373;
+  font-size: 20px;
+  line-height: 38px;
+}
+
+.interested_class {
+  color: #222222;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.class_wrapper {
+  width: 1182px;
+  height: 106px;
+  margin-top: 24px;
+  margin-bottom: 100px;
+  padding: 24px;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 20px;
+}
+
+.class_wrapper > div {
+  display: inline-block;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 18px;
+  color: #222222;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
