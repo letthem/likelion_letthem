@@ -1,0 +1,24 @@
+body {
+  width: 300px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.4em;
+  color: rgb(255, 196, 215);
+}
+
+#num {
+  font-size: 1.5em;
+  color: gray;
+}
+
+button {
+  width: 80px;
+  height: 20px;
+  border-style: none;
+  background-color: rgb(255, 220, 231);
+  border-radius: 10px;
+}
