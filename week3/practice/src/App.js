@@ -21,7 +21,7 @@ function App() {
         <hr />
         <p className="num">{num}</p>
       </div>
-      <div>
+      <div className="btns">
         <button className="increase-btn" onClick={increaseNum}>
           Increase!
         </button>
