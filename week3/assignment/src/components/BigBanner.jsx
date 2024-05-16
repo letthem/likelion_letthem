@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import headerImage from "./../assets/header-image.png";
+
 const BG = styled.div`
   background-color: #ffe2d2;
   width: 100%;
@@ -16,6 +17,7 @@ const Title = styled.h1`
   margin: auto;
 `;
 const Small = styled.p`
+  cursor: pointer;
   width: 84px;
   height: 34px;
   background-color: #ff6f0f;

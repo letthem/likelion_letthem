@@ -9,6 +9,7 @@ const Nav = styled.nav`
 `;
 
 const CarrotBtn = styled.button`
+  cursor: pointer;
   border: none;
   background-color: white;
   display: flex;
@@ -22,6 +23,7 @@ const ElUl = styled.ul`
 `;
 
 const ElLi = styled.li`
+  cursor: pointer;
   margin-right: 30px;
   text-align: center;
   color: #4d5159;
@@ -45,6 +47,7 @@ const Searchbox = styled.input`
 `;
 
 const ChatBtn = styled.button`
+  cursor: pointer;
   background-color: #ffffff;
   color: #212124;
   border: 0.3px solid #cacaca;
