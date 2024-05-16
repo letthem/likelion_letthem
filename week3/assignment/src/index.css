@@ -1,0 +1,11 @@
+html,
+body {
+  margin: 0px;
+  width: 100%;
+}
+
+#root {
+  max-width: 1200px;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+}
