@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar";
 import BigBanner from "./components/BigBanner";
-import AlbaItem from "./components/AlbaItem";
+import PopularAlba from "./components/PopularAlba";
 import SmallBanner from "./components/SmallBanner";
 
 function App() {
@@ -8,19 +8,7 @@ function App() {
     <>
       <NavBar />
       <BigBanner />
-      <section>
-        <h2>인기 당근알바</h2>
-        <AlbaItem />
-        {/* <AlbaItem />
-        <AlbaItem />
-        <AlbaItem />
-        <AlbaItem />
-        <AlbaItem />
-        <AlbaItem />
-        <AlbaItem />
-        <AlbaItem />
-        <AlbaItem /> */}
-      </section>
+      <PopularAlba />
       <SmallBanner />
     </>
   );
