@@ -2,20 +2,25 @@ import carrot from "./../assets/carrot.png";
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  padding: 12px 15px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 10px 15px;
   display: flex;
 `;
+
 const CarrotBtn = styled.button`
   border: none;
   background-color: white;
   display: flex;
   margin-right: 30px;
 `;
+
 const ElUl = styled.ul`
   display: flex;
   justify-content: center;
-  padding-right: 200px;
+  padding-right: 210px;
 `;
+
 const ElLi = styled.li`
   margin-right: 30px;
   text-align: center;
@@ -25,6 +30,7 @@ const ElLi = styled.li`
   font-size: 1.125rem;
   padding: 10px 0px;
 `;
+
 const Searchbox = styled.input`
   width: 288px;
   height: 40px;
@@ -37,6 +43,7 @@ const Searchbox = styled.input`
   font-size: 1rem;
   font-weight: 200;
 `;
+
 const ChatBtn = styled.button`
   background-color: #ffffff;
   color: #212124;
@@ -49,10 +56,7 @@ const ChatBtn = styled.button`
   width: 90px;
   height: 40px;
 `;
-const UlSearchContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
+
 export default function NavBar() {
   return (
     <Nav>
