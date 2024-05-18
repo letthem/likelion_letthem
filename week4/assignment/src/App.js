@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 const AppContainer = styled.div`
@@ -23,6 +23,18 @@ function App() {
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([]);
   const nextId = useRef(1);
+
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem("todos"));
+    if (storedTodos) {
+      setTodos(storedTodos);
+      nextId.current = storedTodos.length + 1;
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const onChange = (e) => {
     setTodo(e.target.value);
