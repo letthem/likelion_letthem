@@ -9,14 +9,56 @@ const AppContainer = styled.div`
 
 const Title = styled.h2`
   color: rgb(167, 167, 215);
-  font-size: 36px;
+  font-size: 45px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 35px;
+  }
+`;
+
+const InputTodo = styled.input`
+  width: 600px;
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid rgba(167, 167, 215, 0.3);
+  border-radius: 10px;
+  background-color: aliceblue;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 767px) {
+    width: 300px;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+`;
+
+const SubmitBtn = styled.button`
+  margin-left: 10px;
+  border: none;
+  padding: 12px 18px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: rgba(167, 167, 215, 0.3);
+
+  @media screen and (max-width: 767px) {
+    font-size: 15px;
+    padding: 12px 16px;
+  }
 `;
 
 const TodoItem = styled.li`
   list-style: none;
-  text-decoration: ${(props) => (props.isDone ? "line-through" : "none")};
-  color: ${(props) => (props.isDone ? "gray" : "black")};
+  font-size: 20px;
+  text-decoration: ${(props) =>
+    props.isdone === "true" ? "line-through" : "none"};
+  color: ${(props) => (props.isdone === "true" ? "gray" : "black")};
   cursor: pointer;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
 `;
 
 function App() {
@@ -47,19 +89,20 @@ function App() {
     }
 
     const newTodo = {
-      id: nextId.current++,
+      id: nextId.current,
       value: todo,
-      isDone: false,
+      isdone: false,
     };
 
     setTodos((arr) => [newTodo, ...arr]);
+    nextId.current++;
     setTodo("");
   };
 
   const checkTodo = (id) => {
     setTodos((todos) =>
       todos.map((todo) =>
-        todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
+        todo.id === id ? { ...todo, isdone: !todo.isdone } : todo
       )
     );
   };
@@ -72,23 +115,23 @@ function App() {
     <AppContainer>
       <Title>TO DO LIST</Title>
       <form>
-        <input
+        <InputTodo
           type="text"
           value={todo}
           placeholder="할 일을 입력하세요"
           onChange={onChange}
         />
-        <button onClick={onSubmit}>+</button>
+        <SubmitBtn onClick={onSubmit}>+</SubmitBtn>
       </form>
-      <ul>
+      <ul style={{ textAlign: "center" }}>
         {todos.map((item) => (
           <TodoItem
             key={item.id}
-            isDone={item.isDone}
+            isdone={item.isdone.toString()}
             onClick={() => checkTodo(item.id)}
           >
             {item.value}
-            <span onClick={() => onDelete(item.id)}>🗑️</span>
+            <span onClick={() => onDelete(item.id)}> 🗑️</span>
           </TodoItem>
         ))}
       </ul>
