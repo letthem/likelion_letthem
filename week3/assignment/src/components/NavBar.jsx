@@ -20,6 +20,12 @@ const ElUl = styled.ul`
   display: flex;
   justify-content: center;
   padding-right: 210px;
+  @media screen and (max-width: 738px) {
+    display: none;
+  }
+  /* @media screen and (min-width: 738px) {
+    display: flex;
+  } */
 `;
 
 const ElLi = styled.li`

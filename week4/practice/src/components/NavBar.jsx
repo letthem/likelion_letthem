@@ -54,7 +54,7 @@ const Searchbox = styled.input`
   box-sizing: border-box;
   font-size: 1rem;
   font-weight: 200;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     display: none;
   }
 `;
@@ -91,7 +91,7 @@ const Menu = styled.img`
   width: 32px;
   height: 32px;
 
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `;
