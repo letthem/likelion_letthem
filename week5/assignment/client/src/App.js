@@ -1,5 +1,50 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import styled from "styled-components";
+
+const Title = styled.h2`
+  font-size: 40px;
+  color: skyblue;
+`;
+
+const Inputbox = styled.input`
+  display: inline-block;
+  width: 300px;
+  height: 20px;
+  font-size: 18px;
+  padding: 5px;
+  border: none;
+  background-color: lavenderblush;
+  border-radius: 5px;
+  margin-right: 10px;
+`;
+
+const Checkbox = styled.input`
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+`;
+
+const Button = styled.input`
+  width: 40px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: lavender;
+`;
+
+const Todo = styled.div`
+  margin-bottom: 10px;
+`;
+
+const TodoText = styled.div`
+  width: 200px;
+`;
+
+const TodoDone = styled.div`
+  color: skyblue;
+`;
 
 const SERVER_URL = "http://localhost:4000/api/todo";
 function App() {
@@ -35,20 +80,31 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>TODO LIST</h1>
-      <form onSubmit={onSubmitHandler}>
-        <input name="text" />
-        <input name="done" type="checkbox" />
-        <input type="submit" value="추가" />
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <Title>TODO LIST</Title>
+      <form
+        onSubmit={onSubmitHandler}
+        style={{ display: "flex", alignItems: "center", marginBottom: "30px" }}
+      >
+        <Inputbox name="text" />
+        <Checkbox name="done" type="checkbox" />
+        <Button type="submit" value="추가" />
       </form>
       {todoList &&
         todoList.map((todo) => (
-          <div key={todo.id} style={{ display: "flex" }}>
-            <div>{todo.id}</div>
-            <div>{todo.text}</div>
-            <div>{todo.done ? "Y" : "N"}</div>
-          </div>
+          <Todo
+            key={todo.id}
+            style={{ display: "flex", justifyContent: "space-between" }}
+          >
+            <TodoText>{todo.text}</TodoText>
+            <TodoDone>{todo.done ? "O" : "X"}</TodoDone>
+          </Todo>
         ))}
     </div>
   );
